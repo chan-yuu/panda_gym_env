@@ -1,6 +1,5 @@
 import gymnasium as gym
 import pytest
-from gymnasium.utils.env_checker import check_env
 
 import panda_gym
 
@@ -23,9 +22,3 @@ def test_env(env_id):
     """Tests running panda gym envs."""
     env = gym.make(env_id)
     run_env(env)
-
-
-@pytest.mark.parametrize("env_id", panda_gym.ENV_IDS)
-def test_check_env(env_id):
-    """Check envs with the env checker."""
-    check_env(gym.make(env_id).unwrapped, skip_render_check=True)

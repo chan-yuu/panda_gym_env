@@ -18,9 +18,9 @@ setup(
     url="https://github.com/qgallouedec/panda-gym",
     packages=find_packages(),
     include_package_data=True,
-    package_data={"panda_gym": ["version.txt"]},
+    package_data={"panda_gym": ["version.txt","assets/mobile_panda_desc/**"]},
     version=__version__,
-    install_requires=["gymnasium>=0.26", "pybullet", "numpy<2", "scipy"],
+    install_requires=["gymnasium>=0.26", "pybullet", "numpy", "scipy"],
     extras_require={
         "develop": ["pytest-cov", "black", "isort", "pytype", "sphinx", "sphinx-rtd-theme"],
     },
